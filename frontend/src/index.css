@@ -1,0 +1,225 @@
+
+/* ==============================
+   RATING
+============================== */
+
+.rating svg {
+  color: rgb(255, 166, 0);
+}
+
+.rating-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding-left: 0.4rem;
+}
+
+/* ==============================
+   LATEST ARTS PRODUCT GRID
+============================== */
+
+.artwork-col {
+  display: flex;
+  align-items: stretch;
+}
+
+/* Product card */
+
+.product-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image */
+
+.product-image-container {
+  width: 100%;
+  height: 250px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f8f8f8;
+  border-radius: 5px;
+}
+
+.product-card .product-image-container img.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Product details */
+
+.product-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 12px 4px 4px;
+}
+
+.product-title {
+  min-height: 48px;
+  height: auto;
+  margin-bottom: 10px;
+  font-size: 17px;
+  overflow: hidden;
+}
+
+.product-title a {
+  color: #1673e6;
+  text-decoration: none;
+}
+
+.product-title a:hover {
+  text-decoration: underline;
+}
+
+.product-price {
+  font-size: 21px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Align ratings */
+
+.product-rating {
+  margin-top: auto;
+}
+
+/* ==============================
+   PRODUCT DETAILS PAGE
+============================== */
+
+.product-detail-page {
+  max-width: 1320px;
+}
+
+/* Main artwork image container */
+
+.detail-image-container {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f8f8f8;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* Main artwork image */
+
+.detail-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Product information */
+
+.detail-info {
+  border-radius: 8px;
+}
+
+.detail-info .list-group-item {
+  padding: 14px 12px;
+  overflow-wrap: anywhere;
+}
+
+.detail-info h4 {
+  font-size: 23px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Purchase section */
+
+.purchase-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.purchase-card .list-group-item {
+  padding: 12px 14px;
+}
+
+.purchase-card .btn {
+  padding: 9px 12px;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+============================== */
+
+/* Tablets */
+
+@media (max-width: 991px) {
+  .detail-image-container {
+    height: 400px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .detail-image-container {
+    height: 350px;
+  }
+
+  .detail-info,
+  .purchase-card {
+    margin-top: 10px;
+  }
+}
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+  .detail-image-container {
+    height: 280px;
+  }
+}
+.art-section {
+  padding-top: 10px;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  color: #292B27;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.section-heading p {
+  color: #77736B;
+  font-size: 15px;
+  margin: 0;
+}
+
+.heading-line {
+  width: 55px;
+  height: 3px;
+  background-color: #C9B78C;
+  margin-top: 15px;
+  border-radius: 5px;
+}
