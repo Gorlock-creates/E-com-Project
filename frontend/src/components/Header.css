@@ -1,29 +1,113 @@
+
+/* HEADER */
+
 .cream-navbar {
-  background-color: #F1EEE7 !important;
-  border-bottom: 1px solid #D8D1C3;
+  background-color: #292B27 !important;
+  border-bottom: 1px solid #45473F;
+  padding: 16px 0;
 }
 
-.cream-navbar .navbar-brand {
-  color: #292B27 !important;
-  font-weight: 600;
-  font-size: 22px;
+.brand-name {
+  color: #F1EEE7 !important;
+  font-size: 25px;
   letter-spacing: 1px;
+  white-space: nowrap;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.cream-navbar .nav-link {
-  color: #292B27 !important;
-  margin-left: 15px;
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.search-wrapper {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 45px;
+}
+
+.search-wrapper .form-control {
+  background-color: #F1EEE7;
+  color: #292B27;
+  border: 1px solid #C9B78C;
+  border-radius: 25px;
+  padding: 11px 18px;
+  box-shadow: none;
+}
+
+.search-wrapper .form-control:focus {
+  border-color: #C9B78C;
+  box-shadow: 0 0 0 3px rgba(201, 183, 140, 0.2);
+}
+
+.search-wrapper .btn {
+  background-color: #C9B78C;
+  color: #292B27;
+  border: none;
+  border-radius: 25px;
+  padding: 9px 22px;
   transition: 0.2s ease;
 }
 
-.cream-navbar .nav-link:hover {
-  color: #8A7350 !important;
+.search-wrapper .btn:hover {
+  background-color: #B5A174;
+  color: #292B27;
 }
 
-.cream-navbar .navbar-brand img {
-  width: 35px;
-  height: 35px;
+.nav-links .nav-link {
+  color: #F1EEE7 !important;
+  font-weight: 500;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.nav-links .nav-link:hover,
+.nav-links .nav-link.active {
+  color: #C9B78C !important;
+}
+
+.cream-navbar .navbar-toggler {
+  border-color: #C9B78C;
+}
+
+.cream-navbar .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.cream-navbar .dropdown-menu {
+  background-color: #292B27;
+  border: 1px solid #45473F;
+  border-radius: 10px;
+}
+
+.cream-navbar .dropdown-item {
+  color: #F1EEE7;
+}
+
+.cream-navbar .dropdown-item:hover {
+  background-color: #45473F;
+  color: #C9B78C;
+}
+
+.cream-navbar .dropdown-toggle {
+  color: #F1EEE7 !important;
+}
+
+@media (max-width: 991px) {
+  .search-wrapper {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .nav-links .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .brand-name {
+    font-size: 22px;
+  }
 }

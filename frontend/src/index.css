@@ -223,3 +223,104 @@
   margin-top: 15px;
   border-radius: 5px;
 }
+
+
+/* =========================
+   KALA KRITI NAVBAR
+========================= */
+
+.cream-navbar {
+  background-color: #F1EEE7;
+  border-bottom: 1px solid #DED7CA;
+  padding: 16px 0;
+}
+
+/* Brand */
+.brand-name {
+  color: #30291F !important;
+  font-size: 25px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+/* Search */
+.search-wrapper {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 45px;
+}
+
+.search-wrapper .form-control {
+  background-color: #FAF9F6;
+  border: 1px solid #D8D1C3;
+  border-radius: 25px;
+  padding: 11px 18px;
+  box-shadow: none;
+}
+
+.search-wrapper .form-control:focus {
+  border-color: #A47743;
+  box-shadow: 0 0 0 3px rgba(164, 119, 67, 0.12);
+}
+
+.search-wrapper .btn {
+  background-color: #8B6845;
+  border: none;
+  border-radius: 25px;
+  padding: 9px 22px;
+  transition: background-color 0.2s ease;
+}
+
+.search-wrapper .btn:hover {
+  background-color: #6F5034;
+}
+
+/* Navigation links */
+.nav-links .nav-link {
+  color: #30291F !important;
+  font-weight: 500;
+  margin-left: 18px;
+  white-space: nowrap;
+}
+
+.nav-links .nav-link:hover {
+  color: #A47743 !important;
+}
+
+/* Dropdown */
+.cream-navbar .dropdown-menu {
+  background-color: #FAF9F6;
+  border: 1px solid #DED7CA;
+  border-radius: 10px;
+}
+
+.cream-navbar .dropdown-item:hover {
+  background-color: #F1EEE7;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .search-wrapper {
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .nav-links .nav-link {
+    margin-left: 0;
+    padding: 10px 0;
+  }
+
+  .brand-name {
+    font-size: 22px;
+  }
+}
+
