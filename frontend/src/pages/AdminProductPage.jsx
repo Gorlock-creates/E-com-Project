@@ -182,7 +182,7 @@ function AdminProductPage() {
 
   return (
     <Container className="py-4">
-      <h2 className="mb-4">Kala Kriti Admin Dashboard</h2>
+      <h2 className="mb-4">Kala Kriti's Admin Dashboard</h2>
 
       {error && <Alert variant="danger">{error}</Alert>}
       {message && <Alert variant="success">{message}</Alert>}
