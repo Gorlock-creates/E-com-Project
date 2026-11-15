@@ -40,9 +40,9 @@ function AdminProductPage() {
       setLoading(true);
 
       const { data } = await axios.get("/api/products");
-
       setProducts(data);
     } catch (err) {
+      console.error("Fetch error:", err);
       setError(
         err.response?.data?.error || "Failed to fetch products."
       );
@@ -57,14 +57,18 @@ function AdminProductPage() {
 
   // Handle input changes
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+
+    setFormData((previousData) => ({
+      ...previousData,
+      [name]: value,
+    }));
   };
 
   // Add or update artwork
   const submitHandler = async (e) => {
+    console.log("SUBMIT HANDLER IS RUNNING");
+
     e.preventDefault();
 
     try {
@@ -78,25 +82,35 @@ function AdminProductPage() {
         countInStock: Number(formData.countInStock),
       };
 
+      console.log("Editing ID:", editingId);
+      console.log("Stock value:", productData.countInStock);
+
       if (editingId) {
-  console.log("Updating artwork:", editingId);
-  console.log("Stock being sent:", productData.countInStock);
+        console.log("Sending PUT request...");
 
-  const response = await axios.put(
-    `/api/products/${editingId}`,
-    productData
-  );
+        const response = await axios.put(
+          `/api/products/${editingId}`,
+          productData
+        );
 
-  console.log("Backend response:", response.data);
+        console.log("Update response:", response.data);
 
-  setMessage("Artwork updated successfully!");
-}
+        setMessage("Artwork updated successfully!");
+      } else {
+        console.log("Sending POST request...");
+
+        await axios.post("/api/products", productData);
+
+        setMessage("Artwork added successfully!");
+      }
 
       setFormData(initialForm);
       setEditingId(null);
 
       await fetchProducts();
     } catch (err) {
+      console.error("Save error:", err);
+
       setError(
         err.response?.data?.error || "Operation failed."
       );
@@ -158,6 +172,8 @@ function AdminProductPage() {
 
       await fetchProducts();
     } catch (err) {
+      console.error("Delete error:", err);
+
       setError(
         err.response?.data?.error || "Failed to delete artwork."
       );
@@ -343,11 +359,8 @@ function AdminProductPage() {
                 </td>
 
                 <td>{product.name}</td>
-
                 <td>Rs. {product.price}</td>
-
                 <td>{product.category}</td>
-
                 <td>{product.countInStock}</td>
 
                 <td>
