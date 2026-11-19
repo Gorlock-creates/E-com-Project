@@ -97,10 +97,6 @@ function Header() {
               {/* User Menu */}
               {userInfo ? (
                 <NavDropdown title={userInfo.fullname}>
-                  <NavDropdown.Item>
-                    Profile
-                  </NavDropdown.Item>
-
                   <NavDropdown.Item onClick={logoutHandler}>
                     Logout
                   </NavDropdown.Item>
