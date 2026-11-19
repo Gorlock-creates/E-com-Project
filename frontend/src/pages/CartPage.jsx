@@ -69,7 +69,7 @@ function CartPage() {
                     </Col>
 
                     <Col md={2}>
-                      ${Number(item.price).toFixed(2)}
+                      Rs {Number(item.price).toFixed(2)}
                     </Col>
 
                     <Col md={2}>
@@ -111,21 +111,21 @@ function CartPage() {
             </ListGroup.Item>
 
             <ListGroup.Item>
-              <strong>${subtotal.toFixed(2)}</strong>
+              <strong>Rs {subtotal.toFixed(2)}</strong>
             </ListGroup.Item>
 
             {cartItems.length > 0 && (
               <>
                 <ListGroup.Item>
-                  Shipping: ${shipping.toFixed(2)}
+                  Shipping: Rs {shipping.toFixed(2)}
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                  Tax: ${tax.toFixed(2)}
+                  Tax: Rs {tax.toFixed(2)}
                 </ListGroup.Item>
 
                 <ListGroup.Item>
-                  <strong>Total: ${total.toFixed(2)}</strong>
+                  <strong>Total: Rs {total.toFixed(2)}</strong>
                 </ListGroup.Item>
               </>
             )}
